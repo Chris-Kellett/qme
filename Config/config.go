@@ -144,15 +144,15 @@ func init() {
 		panic(wdErr)
 	}
 
-	trimIndex := strings.LastIndex(wd, `image-bot\`)
+	trimIndex := strings.LastIndex(wd, `QMe\`)
 	if trimIndex != -1 {
-		Settings.APPROOTDIR = wd[:trimIndex+len(`image-bot\`)]
+		Settings.APPROOTDIR = wd[:trimIndex+len(`QMe\`)]
 	} else {
 		Settings.APPROOTDIR = wd
 	}
 
 	fmt.Printf("APPROOTDIR set as: [%s]\n", Settings.APPROOTDIR)
-	loadErr := godotenv.Load(Settings.APPROOTDIR + ".env")
+	loadErr := godotenv.Load(Settings.APPROOTDIR + "/.env")
 	if loadErr != nil {
 		fmt.Printf("loadErr ERROR: %s\n", loadErr.Error())
 		panic(loadErr)

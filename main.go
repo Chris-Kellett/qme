@@ -1,8 +1,10 @@
-package botmain
+package main
 
 import (
+	"os"
+	"os/signal"
 	bot "qme/Bot"
-	"sync"
+	"syscall"
 )
 
 func TestingStart() {
@@ -10,13 +12,11 @@ func TestingStart() {
 }
 
 func main() {
-	var wg sync.WaitGroup
+	bot.Init()
 
-	wg.Add(1)
-	go func() {
-		defer wg.Done()
-		go bot.Init()
-	}()
+	shutdown := make(chan os.Signal, 1)
+	signal.Notify(shutdown, os.Interrupt, syscall.SIGTERM)
+	defer signal.Stop(shutdown)
 
-	wg.Wait()
+	<-shutdown
 }
