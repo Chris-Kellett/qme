@@ -1,7 +1,7 @@
 package bot
 
 import (
-	config "hashbat-image-bot/Config"
+	config "qme/Config"
 	"testing"
 )
 

@@ -2,7 +2,7 @@ package logger
 
 import (
 	"fmt"
-	config "hashbat-image-bot/Config"
+	config "qme/Config"
 	"runtime"
 	"strings"
 	"time"

@@ -1,7 +1,7 @@
 package botmain
 
 import (
-	bot "hashbat-image-bot/Bot"
+	bot "qme/Bot"
 	"sync"
 )
 

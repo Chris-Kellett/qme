@@ -1,6 +1,6 @@
 package logger
 
-import config "hashbat-image-bot/Config"
+import config "qme/Config"
 
 func Debug(guildId string, logText string, a ...any) {
 	if config.Settings.LOGGINGLEVEL <= config.LoggingLevelDebug {

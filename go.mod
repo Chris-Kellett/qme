@@ -1,4 +1,4 @@
-module hashbat-image-bot
+module qme
 
 go 1.23.1
 

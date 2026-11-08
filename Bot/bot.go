@@ -2,10 +2,10 @@ package bot
 
 import (
 	"fmt"
-	config "hashbat-image-bot/Config"
-	database "hashbat-image-bot/Database"
-	handlers "hashbat-image-bot/Handlers"
-	logger "hashbat-image-bot/Logger"
+	config "qme/Config"
+	database "qme/Database"
+	handlers "qme/Handlers"
+	logger "qme/Logger"
 
 	"github.com/bwmarrin/discordgo"
 )

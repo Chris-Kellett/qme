@@ -3,8 +3,8 @@ package database
 import (
 	"database/sql"
 	"fmt"
-	config "hashbat-image-bot/Config"
-	logger "hashbat-image-bot/Logger"
+	config "qme/Config"
+	logger "qme/Logger"
 
 	_ "github.com/go-sql-driver/mysql"
 )
